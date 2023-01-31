@@ -62,7 +62,6 @@ a{
 
 /*************** HEADER STYLES START ****************/
 .site-header{
-    position: relative;
     padding-top: 21px;
     padding-bottom: 21px;
     background-color: #fff;
@@ -127,8 +126,8 @@ a{
 
 /*********** HEADER RESPONSIVE STYLES START *********/
 .hidden-header{
-    position: absolute;
-    top: 85px;
+    position: fixed;
+    top: 16%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -139,12 +138,14 @@ a{
     background-image: url("../images/hero-bg.png");
     background-repeat: no-repeat;
     background-position: center 650px;
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
+    transform: translateY(-150%);
     transition: 0.5s;
 }
 
 .hidden-header.show-header{
-    transform: translateX(0);
+    /* transform: translateX(0); */
+    transform: translateY(0);
 }
 
 .hidden-nav{
@@ -308,6 +309,124 @@ a{
         display: none;
     }
 }
+
+@media only screen and (max-width: 750px) {
+    .hero{
+        margin-bottom: 140px;
+    }
+}
 /*********** HERO RESPONSIVE END **********/
 /*************** HERO STYLES END ****************/
+
+/*************** DIFFERENT STYLES START ****************/
+.different{
+    margin-bottom: 158px;
+}
+
+.different-title{
+    margin-top: 0;
+    margin-bottom: 96px;
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: #2C2830;
+}
+
+.different-title::before{
+    display: block;
+    width: 150px;
+    height: 1px;
+    margin-bottom: 63px;
+    background-color: #C396C6;
+    content: "";
+}
+
+.different__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.different__item{
+    width: 100%;
+    max-width: 350px;
+}
+
+.different__item--title{
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.388889px;
+    color: #2C2830;    
+}
+
+.different__item--title::before{
+    display: block;
+    width: 86px;
+    height: 86px;
+    margin-bottom: 32px;
+    border-radius: 50%;
+    background-color: #96A9C6;
+    background-image: url("../images/spark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
+
+.dollar-sign::before{
+    background-image: url("../images/dollor-sign.svg");
+}
+
+.user::before{
+    background-image: url("../images/user.svg");
+}
+
+.different__item--text{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #837D88;
+}
+/*********** DIFFERENT RESPONSIVE START ***********/
+@media only screen and (max-width: 992px) {
+    .different__list{
+        flex-wrap: wrap;
+    }
+
+    .different__item:not(:last-child){
+        margin-bottom: 56px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .different-title{
+        margin-bottom: 80px;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    .different-title::before{
+        margin-right: auto;
+        margin-bottom: 40px;
+        margin-left: auto;
+    }
+    .different__list{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .different__item--title::before{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+/*********** DIFFERENT RESPONSIVE END ***********/
+/*************** DIFFERENT STYLES END ****************/
 /*************** MAIN STYLES END ****************/
