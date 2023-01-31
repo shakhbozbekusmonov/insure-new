@@ -258,5 +258,54 @@ a{
     right: calc(50% - 552px);
     /* right: 155px; */
 }
+
+.hero-img-mobile{
+    display: none;
+}
+
+/*********** HERO RESPONSIVE START **********/
+@media only screen and (max-width: 1150px) {
+    .hero-img{
+        display: none;
+    }
+
+    .hero-img-mobile{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero{
+        padding-top: 0;
+        background-image: url("../images/hero-bg.png");
+        background-position: calc(50% - 404px) calc(50% + 47px);
+    }
+
+    .hero .container{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .hero-img-mobile{
+        width: 100%;
+        margin-bottom: 93px;
+    }
+
+    .hero-start{
+        padding-right: 24px;
+        padding-left: 24px;
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hero-title::before{
+        display: none;
+    }
+}
+/*********** HERO RESPONSIVE END **********/
 /*************** HERO STYLES END ****************/
 /*************** MAIN STYLES END ****************/
