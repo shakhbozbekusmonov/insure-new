@@ -116,4 +116,73 @@ a{
     background-color: #2C2830;
     color: #fff;
 }
+
+.burger-menu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/*********** HEADER RESPONSIVE STYLES START *********/
+.hidden-header{
+    position: fixed;
+    top: 85px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 40px;
+    background-color: #2C2830;
+    background-image: url("../images/hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 650px;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.hidden-header.show-header{
+    transform: translateX(0);
+}
+
+.hidden-nav{
+    text-align: center;
+}
+
+.hidden__item{
+    margin-bottom: 24px;
+}
+
+.hidden__link{
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 1.36364px;
+    color: #fff;
+}
+
+.hidden__btn{
+    padding: 9px 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1.36364px;
+    color: #fff;    
+    border: 1.5px solid #fff;
+}
+
+@media only screen and (max-width: 665px) {
+    .site-header{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .site-header__wrapper--end{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+    }
+}
+/*********** HEADER RESPONSIVE STYLES END *********/
 /*************** HEADER STYLES END ****************/
